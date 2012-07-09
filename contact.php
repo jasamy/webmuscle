@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get in touch to find out how Webmuscle can assist your company raise its online profile">
     <meta name="author" content="Webmuscle">
-    <meta name="keywords" content="webmuscle, design, online profile, assisted design, freelance">    
+    <meta name="keywords" content="webmuscle, design, online profile, assisted design, freelance, jason byers, web design, system administration, contact webmuscle">    
     <script type="text/javascript" src="http://fast.fonts.com/jsapi/5674a0fa-294d-404a-af09-dc81cef40c6f.js"></script>
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <style>
@@ -131,6 +131,16 @@ if(isset($_GET['status']) && ($_GET['status'] == "success")) {
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="./assets/js/jquery.js"></script>
 	<script src="./assets/js/jquery.validate.js"></script>
+    <script src="./assets/js/bootstrap-alert.js"></script>
+    <script src="./assets/js/bootstrap-modal.js"></script>
+    <script src="./assets/js/bootstrap-dropdown.js"></script>
+    <script src="./assets/js/bootstrap-scrollspy.js"></script>
+    <script src="./assets/js/bootstrap-tab.js"></script>
+    <script src="./assets/js/bootstrap-tooltip.js"></script>
+    <script src="./assets/js/bootstrap-popover.js"></script>
+    <script src="./assets/js/bootstrap-button.js"></script>
+    <script src="./assets/js/bootstrap-collapse.js"></script>
+    <script src="./assets/js/bootstrap-typeahead.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 		$("#commentForm").validate();
