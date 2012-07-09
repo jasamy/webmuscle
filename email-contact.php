@@ -4,7 +4,7 @@ if(isset($_POST['email'])) {
 	// EDIT THE 2 LINES BELOW AS REQUIRED
 	$email_to = "byers.jason@gmail.com";
 	$email_subject = "General Enquiry";
-	$name = $_POST['first_name']; // required
+	$name = $_POST['name']; // required
 	$telephone = $_POST['telephone']; // required
 	$email_from = $_POST['email']; // required
 	$message = $_POST['message']; // required
@@ -32,7 +32,7 @@ if(isset($_POST['email'])) {
 	  return str_replace($bad,"",$string);
 	}
 	
-	$email_message .= "Name: ".clean_string($first_name)."\n";
+	$email_message .= "Name: ".clean_string($name)."\n";
 	$email_message .= "Email: ".clean_string($email_from)."\n";
 	$email_message .= "Telephone: ".clean_string($telephone)."\n";
 	$email_message .= "Message: ".clean_string($message)."\n";
