@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Webmuscle &ndash; Website design &amp; build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch to find out how Webmuscle can assist your company raise its online profile">
+    <meta name="author" content="Webmuscle">
+    <meta name="keywords" content="webmuscle, design, online profile, assisted design, freelance">    
+    <script type="text/javascript" src="http://fast.fonts.com/jsapi/5674a0fa-294d-404a-af09-dc81cef40c6f.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 90px; /* 90px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<!--[if gte IE 9]>
+  	<style type="text/css">
+    .gradient {
+       filter: none;
+    	}
+  	</style>
+	<![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	<script type="text/javascript">
+	function hide_fontlogo() {
+	document.getElementById("mti_wfs_colophon").style.display="none";
+	}
+	</script>
+	<script type="text/javascript">
+//<![CDATA[
+	function relative_time(time_value) {
+	  var values = time_value.split(" ");
+	  time_value = values[1] + " " + values[2] + ", " + values[5] + " " + values[3];
+	  var parsed_date = Date.parse(time_value);
+	  var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
+	  var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
+	  delta = delta + (relative_to.getTimezoneOffset() * 60);
+	  if (delta < 60) {
+		return 'less than a minute ago';
+	  } else if(delta < 120) {
+		return 'about a minute ago';
+	  } else if(delta < (60*60)) {
+		return (parseInt(delta / 60)).toString() + ' minutes ago';
+	  } else if(delta < (120*60)) {
+		return 'about an hour ago';
+	  } else if(delta < (24*60*60)) {
+		return 'about ' + (parseInt(delta / 3600)).toString() + ' hours ago';
+	  } else if(delta < (48*60*60)) {
+		return '1 day ago';
+	  } else {
+		return (parseInt(delta / 86400)).toString() + ' days ago';
+	  }
+	}
+	
+	function twitterCallback2(twitters) {
+	  var statusHTML = [];
+	  for (var i=0; i<twitters.length; i++){
+		var username = twitters[i].user.screen_name;
+		var status = twitters[i].text.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function(url) {
+		  return '<a href="'+url+'">'+url+'</a>';
+		}).replace(/\B@([_a-z0-9]+)/ig, function(reply) {
+		  return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+		});
+		statusHTML.push('<li style="margin-top:10px"><span>'+status+'</span> <a style="font-size:85%" href="http://twitter.com/'+username+'/statuses/'+twitters[i].id_str+'">'+relative_time(twitters[i].created_at)+'</a></li>');
+	  }
+	  document.getElementById('twitter_update_list').innerHTML = statusHTML.join('');
+	}
+	//]]>
+</script>
+  </head>
+  <body onload="hide_fontlogo()">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#"><span class="kern">W</span>ebmuscle</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="#">About</a></li>
+<!--              <li><a href="work.html">Work</a></li> -->
+              <li><a href="contact.php">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+	<div class="row">
+    <div class="span4">
+	<div style="display:table;margin-bottom:20px;">
+      <h2>Who we are</h2>
+      <p><img align="left" class="right-margin-10 bottom-margin-10" src="assets/img/jason_100.png">Webmuscle is the work of UK-based designer / developer Jason Byers.</p>
+      <p>You can contact Jason on 07595 454727 or via the <a href="contact.php">contact page</a>.</p>
+	</div>
+      <div class="simplewhitebox">
+  <h3>@jasonleebyers</h3>
+  <ul id="twitter_update_list"><li></li></ul>
+  <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/jasonleebyers.json?callback=twitterCallback2&amp;count=5"></script>
+  <a href="http://twitter.com/jasonleebyers"><img align="left" src="assets/img/icon-twitter.png">&nbsp;Follow me on Twitter</a>
+</div>
+    </div>
+	<div class="span8">
+	<div style="margin-top:10px;">
+	<img align="right" src="assets/img/jason_2_250.png" alt="Jason working at Twig in 2011" style="margin-left:20px;">
+	<p>Jason was born in the small town of Mossend, Scotland.</p>
+	<p>After leaving school he went to work as a junior finished artist at a small advertising agency in Glasgow.</p>
+	<p>It was from there that he studied design at Glasgow College of Printing.</p>
+	<p>With the advent of the Apple Macintosh and desktop publishing, Jason moved to London to work in the corporate publications department for a large advertising agency.</p>
+	<p>During his time in London Jason worked for a small design/reprographics company specialising in the fashion and music industry.</p>
+	<p>It was here where he honed his skills in typography and image manipulation as well as gaining his first exposure to the world-wide-web.</p>
+	<p>After 10 years in London Jason moved back to Scotland and joined a large Glasgow-based media company.</p>
+	<p>Very quickly he became involved in the online side of the business and helped it grow from a small web-presence to a globally recognised brand.</p>
+	<p>Jason then worked for a web-based start-up making short educational films for schools.</p>
+	<p>Charged with taking the companies unique content online, Jason together with a small team of designers and developers created a multi-award winning website which has been sucessfully received world-wide.</p>
+	<p><a href="contact.php">Contact us</a>  today to find out how Jason and Webmuscle can help your company grow its online presence.</p>
+	</div>
+	</div>
+</div><!-- End of Row 1 -->
+<hr>
+<footer>
+		<div class="row">
+		<div class="span6">
+        <p>&copy; Webmuscle 2012</p>
+        </div>
+        <div class="span6">
+        <span class="pull-right left-margin-5">
+		<a href="https://twitter.com/jasonleebyers" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @jasonleebyers</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</span>
+        <span class="pull-right left-margin-5">
+		<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+		<script type="IN/MemberProfile" data-id="http://www.linkedin.com/pub/jason-byers/6/716/8a6" data-format="click" data-related="false"></script>
+		</span>
+        <span class="pull-right">
+		<!-- Place this tag where you want the badge to render -->
+<a href="//plus.google.com/117000049533779177714?prsrc=3" rel="author" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" alt="" style="border:0;width:14px;height:14px;"/></a>
+		</span>
+		</div>
+        </div>
+      </footer>
+
+</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./assets/js/jquery.js"></script>
+  </body>
+</html>
