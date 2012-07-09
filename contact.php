@@ -87,9 +87,9 @@ if(isset($_GET['status']) && ($_GET['status'] == "success")) {
 
 	<p>
       <label for="name">Name (required)</label> 
-        <input name="name" type="text" id="first_name" tabindex="1" size="100" maxlength="100" class="required" /> 
+        <input name="name" type="text" id="name" tabindex="1" size="100" maxlength="100" class="required" /> 
       <label for="telephone">Telephone (optional)</label> 
-        <input name="telephone" type="text" id="first_name" tabindex="1" size="100" maxlength="100" />
+        <input name="telephone" type="text" id="telephone" tabindex="1" size="100" maxlength="100" />
       <label for="email">Email (required)</label> 
         <input name="email" type="text" id="email" tabindex="3" size="100" maxlength="100" class="required" />
     <label for="message">Message (optional)</label>
