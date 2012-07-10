@@ -2,8 +2,8 @@
 if(isset($_POST['email'])) {
 	
 	// EDIT THE 2 LINES BELOW AS REQUIRED
-	$email_to = "byers.jason@gmail.com";
-	$email_subject = "General Enquiry";
+	$email_to = "jas@webmuscle.co.uk";
+	$email_subject = "Website Enquiry";
 	$name = $_POST['name']; // required
 	$telephone = $_POST['telephone']; // required
 	$email_from = $_POST['email']; // required
