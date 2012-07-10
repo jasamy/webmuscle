@@ -2,7 +2,7 @@
 if(isset($_POST['email'])) {
 	
 	// EDIT THE 2 LINES BELOW AS REQUIRED
-	$email_to = "jasamy31@hotmail.com";
+	$email_to = "jas@webmuscle.co.uk";
 	$email_subject = "Website Enquiry";
 	$name = $_POST['name']; // required
 	$telephone = $_POST['telephone']; // required
